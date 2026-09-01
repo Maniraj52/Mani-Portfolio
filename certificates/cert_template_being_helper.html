@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate of Internship - Being Helper Foundation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,600&display=swap');
+
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 297mm;
+      height: 210mm;
+      margin: 0;
+      background: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      color: #1e293b;
+      position: relative;
+      overflow: hidden;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Certificate Outer Frame */
+    .cert-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      padding: 22px 28px 45px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #ffffff;
+    }
+
+    /* Top Right Registration Info */
+    .top-reg-no {
+      position: absolute;
+      top: 10px;
+      right: 28px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.5px;
+    }
+
+    /* Header Section */
+    .header-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .logo-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon-svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    .logo-text-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-title-main {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1;
+      color: #0284c7;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-title-sub {
+      font-size: 13px;
+      font-weight: 900;
+      color: #1e3a8a;
+      letter-spacing: 3px;
+      margin-top: 2px;
+    }
+
+    .logo-tagline {
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+      font-style: italic;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .title-block {
+      text-align: right;
+    }
+
+    .main-cert-word {
+      font-family: 'Great Vibes', cursive;
+      font-size: 64px;
+      color: #0284c7;
+      line-height: 0.9;
+      font-weight: normal;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    .sub-cert-word {
+      font-size: 16px;
+      font-weight: 900;
+      color: #1e3a8a;
+      letter-spacing: 5px;
+      margin-top: 4px;
+    }
+
+    /* Body Content */
+    .content-section {
+      padding: 10px 5px 0 5px;
+      text-align: justify;
+      line-height: 1.85;
+      font-size: 14px;
+      color: #1e293b;
+      position: relative;
+      z-index: 2;
+    }
+
+    .fill-line {
+      font-weight: 700;
+      color: #0f172a;
+      border-bottom: 1.5px dotted #64748b;
+      padding: 0 4px;
+      display: inline-block;
+    }
+
+    .fill-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: #0369a1;
+    }
+
+    .fill-grade {
+      font-size: 17px;
+      font-weight: 900;
+      color: #0284c7;
+    }
+
+    .closing-note {
+      text-align: center;
+      font-weight: 600;
+      color: #334155;
+      font-style: italic;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    /* Signatures & Seal Section */
+    .footer-signatures {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 15px;
+      padding: 0 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .sig-col {
+      text-align: center;
+      width: 22%;
+    }
+
+    .sig-handwritten {
+      font-family: 'Great Vibes', cursive;
+      font-size: 26px;
+      color: #1e3a8a;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .sig-line-bar {
+      width: 100%;
+      height: 1.5px;
+      background: #475569;
+      margin: 4px 0 6px 0;
+    }
+
+    .sig-signer-name {
+      font-size: 11px;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .sig-signer-role {
+      font-size: 9px;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+    }
+
+    /* Circular Stamp Seal */
+    .seal-container {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px dashed #0284c7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #0284c7;
+      padding: 6px;
+      position: absolute;
+      right: 170px;
+      bottom: -5px;
+      background: rgba(2, 132, 199, 0.04);
+      transform: rotate(-10deg);
+    }
+
+    .seal-text-top {
+      font-size: 7px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+    }
+
+    .seal-center-brand {
+      font-size: 10px;
+      font-weight: 900;
+      margin: 2px 0;
+    }
+
+    .seal-text-bottom {
+      font-size: 6px;
+      font-weight: 700;
+    }
+
+    .issue-date-col {
+      text-align: right;
+      width: 20%;
+    }
+
+    .issue-date-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .issue-date-val {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0284c7;
+      border-bottom: 1.5px dotted #64748b;
+      padding: 0 4px;
+      display: inline-block;
+    }
+
+    /* Bottom Solid Banner */
+    .bottom-info-banner {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1e3a8a;
+      color: #ffffff;
+      padding: 7px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .banner-left {
+      max-width: 58%;
+    }
+
+    .banner-right {
+      text-align: right;
+      max-width: 40%;
+      font-weight: 600;
+      color: #93c5fd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cert-container">
+    <!-- Reg No -->
+    <div class="top-reg-no">Reg. No: U85300BR2021NPL050486</div>
+
+    <!-- Header -->
+    <div class="header-section">
+      <div class="logo-block">
+        <div class="logo-wrapper">
+          <svg class="logo-icon-svg" viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="46" fill="#0284c7" fill-opacity="0.1" stroke="#0284c7" stroke-width="3" />
+            <path d="M50 20 L58 36 L76 38 L62 50 L66 68 L50 58 L34 68 L38 50 L24 38 L42 36 Z" fill="#0284c7" />
+            <path d="M30 75 Q50 65 70 75" stroke="#1e3a8a" stroke-width="4" stroke-linecap="round" />
+          </svg>
+          <div class="logo-text-box">
+            <div class="logo-title-main">Being HELPER</div>
+            <div class="logo-title-sub">FOUNDATION</div>
+          </div>
+        </div>
+        <div class="logo-tagline">Helping . Healing . Caring</div>
+      </div>
+
+      <div class="title-block">
+        <div class="main-cert-word">Certificate</div>
+        <div class="sub-cert-word">OF INTERNSHIP</div>
+      </div>
+    </div>
+
+    <!-- Certificate Body Text -->
+    <div class="content-section">
+      <p>
+        This is to certify that <span class="fill-line fill-name">Mani Raj</span> <span
+          class="fill-line">(12514687)</span>, a student of <span class="fill-line">L.P.U</span>, <span
+          class="fill-line">B.Tech CSE (AIML)</span>, has successfully completed his/her internship under the
+        <strong>Community Development Project</strong> organized by <strong>Being Helper Foundation, Patna</strong>.
+        He/She completed the internship for a duration of <span class="fill-line"><strong>30 Hours</strong></span>, from
+        <span class="fill-line"><strong>26.6.2026</strong></span> to <span
+          class="fill-line"><strong>28.7.2026</strong></span>, as per the project guidelines. During the internship,
+        he/she actively participated in various community welfare and development initiatives, demonstrated commitment
+        towards social responsibility and contributed effectively to field activities. Based on his/her performance,
+        he/she has been awarded an <span class="fill-line fill-grade"><strong>A+</strong></span> [Grade] by the
+        Foundation.
+      </p>
+      <div class="closing-note">
+        We acknowledge his/her sincere efforts and wish his/her success in all future endeavours.
+      </div>
+    </div>
+
+    <!-- Signatures and Date -->
+    <div class="footer-signatures">
+      <!-- Sig 1 -->
+      <div class="sig-col">
+        <div class="sig-handwritten">Subham Kumar</div>
+        <div class="sig-line-bar"></div>
+        <div class="sig-signer-name">Subham Kumar</div>
+        <div class="sig-signer-role">Founder & Director<br>Being Helper Foundation</div>
+      </div>
+
+      <!-- Sig 2 -->
+      <div class="sig-col">
+        <div class="sig-handwritten">Muskan Kumari</div>
+        <div class="sig-line-bar"></div>
+        <div class="sig-signer-name">Muskan Kumari</div>
+        <div class="sig-signer-role">Director<br>Being Helper Foundation</div>
+      </div>
+
+      <!-- Sig 3 -->
+      <div class="sig-col">
+        <div class="sig-handwritten">A. S. Verma</div>
+        <div class="sig-line-bar"></div>
+        <div class="sig-signer-name">Project Manager</div>
+        <div class="sig-signer-role">Being Helper Foundation</div>
+      </div>
+
+      <!-- Seal Stamp -->
+      <div class="seal-container">
+        <div class="seal-text-top">BEING HELPER FOUNDATION</div>
+        <div class="seal-center-brand">★ PATNA ★</div>
+        <div class="seal-text-bottom">Restores • Revive • Resilience</div>
+      </div>
+
+      <!-- Date of issue -->
+      <div class="issue-date-col">
+        <div class="issue-date-label">Date of Issue:</div>
+        <div class="issue-date-val">01 . 08 . 2026</div>
+      </div>
+    </div>
+
+    <!-- Bottom Blue Info Banner -->
+    <div class="bottom-info-banner">
+      <div class="banner-left">
+        <strong>Branch Office:</strong> Near Loha Gate, Keshri Nagar, Patliputra Colony, Patna, Bihar 800024<br>
+        <strong>Mail Id:</strong> beinghelperteam@gmail.com &nbsp;|&nbsp; <strong>Contact:</strong> 7353255350 /
+        7295025777
+      </div>
+      <div class="banner-right">
+        (Registered under NITI Aayog, MSME, NGO Darpan and Ministry of Corporate Affairs, Government of India)
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
